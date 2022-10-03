@@ -9,8 +9,7 @@ void push(struct Node** head_ref,
           int new_data)
 {
     // Allocate node
-    struct Node* new_node =
-           (struct Node*) malloc(sizeof(struct Node));
+    struct Node* new_node;
  
     // Put in the data
     new_node->data = new_data;
