@@ -20,15 +20,6 @@ void push(struct Node** head_ref,
     // Move the head to point to the new node
     (*head_ref) = new_node;
 }
-void printList(struct Node *ptr)
-{
-    while (ptr != NULL)
-    {
-        printf("%d->", ptr->data);
-        ptr = ptr->next;
-    }
-    printf("NULL \n");
-}
 struct Node* middleNode(struct Node* head){
     int i = 0;
     struct Node *new = head;
@@ -44,7 +35,6 @@ struct Node* middleNode(struct Node* head){
         new = new->next;
         i--;
     }
-    printf("\n Middle is: %d \n",new->data);
     return new;
 }
 
@@ -57,7 +47,6 @@ int main()
     for (i = 4; i > 0; i--)
     {
         push(&head, i);
-        printList(head);
         middleNode(head);
     }
     return 0;
