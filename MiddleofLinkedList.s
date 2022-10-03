@@ -1,4 +1,5 @@
-00000118 <push>:
+#00000118 <push>
+push:
  addi   sp,sp,-48
  sw     s0,44(sp)
  addi   s0,sp,48
@@ -19,7 +20,8 @@
  addi   sp,sp,48
  ret
 
-00000164 <middleNode>:
+#00000164 <middleNode>
+middleNode:
  addi   sp,sp,-48
  sw     s0,44(sp)
  addi   s0,sp,48
@@ -68,7 +70,8 @@
  addi   sp,sp,48
  ret
 
-00000220 <main>:
+#00000220 main
+main:
  addi   sp,sp,-32
  sw     ra,28(sp)
  sw     s0,24(sp)
