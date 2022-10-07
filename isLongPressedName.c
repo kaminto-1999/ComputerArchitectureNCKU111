@@ -28,8 +28,14 @@ bool isLongPressedName(char *name, char *typed){
 int main()
 {    
     char name[] ="alex";
-    char typed[]="aalexx";
+    char typed0[]="aalexx";
+    char typed1[]="aalleexx";
+    char typed2[]="aalewx";
     bool a;
-    a= isLongPressedName(name,typed);
-    printf("%d",a);
+    a= isLongPressedName(name,typed0);
+    printf("a is %d \n",a);
+    a= isLongPressedName(name,typed1);
+    printf("a is %d \n",a);
+    a= isLongPressedName(name,typed2);
+    printf("a is %d \n",a);
 }

@@ -1,17 +1,37 @@
 .data
-addr_name:  .string "alex"
-addr_typed: .string "aaleex"
-str1:       .string "a0 is "
+addr_name:    .string "alex"
+addr_typed0:  .string "aaleex"
+addr_typed1:  .string "aalleexx"
+addr_typed2:  .string "aalewx"
+str1:         .string "a0 is "
+str2:         .string "\n"   
 
 .text
 main:
     la    t0, addr_name #Load "name" 1st address
-    la    t1, addr_typed #Load "typed" 1st address
+    la    t1, addr_typed0 #Load "typed" 1st address
+    jal   ra, isLongPressed
+    la    t1, addr_typed1 #Load "typed" 1st address
+    jal   ra, isLongPressed
+    la    t1, addr_typed2 #Load "typed" 1st address
+    jal   ra, isLongPressed
+    j     End
+
+isLongPressed:
+    addi  sp, sp, -8     #Use 2 byte for saving register
+    sw    ra, 0(sp)      #1st byte is ra
+    sw    t0, 4(sp)      #2nd byte is t0 
     lb    t2, 0(t0)      #1st character of name
     lb    t3, 0(t1)      #1st character of typed
     bne   t2, t3, Fail   #1st character must the same
     addi  t0, t0, 1      #i++
     addi  t1, t1, 1      #j++
+    jal   Loop           #Call Loop
+    jal   printResult    #Call printResult
+    lw    ra, 0(sp)      #Recall ra
+    lw    t0, 4(sp)      #Recall t0
+    addi  sp,sp, 8
+    ret
 Loop: #1st while loop
     lb    t2, 0(t0)      #Load name[i]
     lb    t3, 0(t1)      #Load typed[j] 
@@ -34,24 +54,24 @@ if2:
     addi  t1, t1, 1      # j++
     lb    t3, 0(t1)      # 
     j     if2
-
 Pass:
-    li    a0, 1         # Return a0 =1
-    j     End
+    addi  a0, x0, 1      # Return a0 =1
+    ret
 Fail:
-    li    a0, 0         # Return a0 =0
-    j     End
+    addi  a0, x0, 0      # Return a0 =0
+    ret
 End:
-    jal ra, printResult
     li a7, 10
     ecall
 printResult:
-        mv t0, a0
-        mv t1, a1
-        la a0, str1
+        mv t4, a0
+        la a0, str1      #Print str1
         li a7, 4
         ecall
-        mv a0, t0
+        mv a0, t4        #Print a0
         li a7, 1
+        ecall
+        la a0, str2      #Print str2
+        li a7, 4
         ecall
         ret
