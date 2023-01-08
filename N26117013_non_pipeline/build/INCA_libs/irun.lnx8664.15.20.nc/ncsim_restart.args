@@ -1,0 +1,28 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
++prog_path=/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./sim/prog0
++incdir+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./src+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./src/AXI+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./include+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./sim
++define+prog0
++ncaccess+rwc
++loadpli1=debpli:novas_pli_boot
+-MESSAGES
++EMGRLOG
+ncverilog.log
+-XLSTIME
+1672233453
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-XLNAME
+ncverilog
+-XLVERSION
+"TOOL:	ncverilog	15.20-s084"
+-XLNAME
+./INCA_libs/irun.lnx8664.15.20.nc/vlsiws_29448

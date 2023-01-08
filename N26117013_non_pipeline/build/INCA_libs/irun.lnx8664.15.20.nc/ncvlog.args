@@ -1,0 +1,33 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./sim/top_tb.sv
+-INCDIR
+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./src
+-INCDIR
+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./src/AXI
+-INCDIR
+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./include
+-INCDIR
+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./sim
+-DEFINE
+prog0
+-DEFINE
+CYCLE=10.0
+-DEFINE
+CYCLE2=
+-DEFINE
+MAX=100000
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND

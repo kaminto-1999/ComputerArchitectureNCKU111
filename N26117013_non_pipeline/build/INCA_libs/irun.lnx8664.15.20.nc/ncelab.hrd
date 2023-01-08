@@ -1,0 +1,8 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-ACCESS
++rwc
+-LOADPLI1
+debpli:novas_pli_boot

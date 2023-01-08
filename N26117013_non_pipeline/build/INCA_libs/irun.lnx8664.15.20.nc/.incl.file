@@ -1,0 +1,15 @@
+./top.sv
+./Riscv_32_bit.sv
+./Riscv_defs.svh
+/home/local_users/peter0/Downloads/111_CA/N26117013_non_pipeline/./src/Riscv_defs.svh
+./ALU.sv
+./Branch_Comparator.sv
+./CSR_File.sv
+./Control_Unit.sv
+./Imm_Gen.sv
+./mux4_1.sv
+./Register_File.sv
+./Reg_PC.sv
+./DMEM_controller.sv
+./Hazard_Detection_Unit.sv
+./SRAM_rtl.sv
