@@ -1,6 +1,5 @@
-`include"../src/Riscv_32_bit.sv"
-`include"../src/SRAM_wrapper.sv"
-`include"../src/SRAM_rtl.sv"
+`include"Riscv_32_bit.sv"
+`include"SRAM_rtl.sv"
 module top (
 input clk,    // Clock
 input rst     // reset
